@@ -1,1 +1,15 @@
-/* You can add global styles to this file, and also import other style files */
+@import './assets/styles/reset.scss';
+
+:root {
+  /* COLORS */
+  --ase-color-salmon: #D94862;
+  --ase-color-pink: #F2358D;
+  --ase-color-blue: #010A26;
+  --ase-color-grey: #364959;
+  --ase-color-ocre: #F2C0A2;
+  --ase-color-white: #ffffff;
+  --ase-color-black: #000000;
+
+  /* FONTS */
+  --ase-font: "Noto Sans", sans-serif;
+}
