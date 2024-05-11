@@ -7,3 +7,4 @@
 - Add basic header
 - Add basic footer
 - Add basic home with general amiibo request
+- Add basic amiibo item component

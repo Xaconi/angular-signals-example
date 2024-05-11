@@ -6,12 +6,12 @@ import { Amiibo } from '../../models/amiibo';
 import { AmiiboService } from '../../services/amiibo.service';
 
 import { CommonModule } from '@angular/common';
+import { AmiiboItemComponent } from '../amiibo/components/amiibo-item/amiibo-item.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule],
-  providers: [AmiiboService],
+  imports: [CommonModule, AmiiboItemComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })

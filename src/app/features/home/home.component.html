@@ -1,7 +1,5 @@
 @for (amiibo of amiibos(); track amiibo) {
-  <article>
-    {{ amiibo.name }}
-  </article>
+  <amiibo-item [item]="amiibo"/>
 }
 
 <p>Total Amiibos: {{ totalAmiibos() }}</p>
