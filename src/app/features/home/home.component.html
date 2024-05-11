@@ -1,3 +1,7 @@
-<p>home works!</p>
+@for (amiibo of amiibos(); track amiibo) {
+  <article>
+    {{ amiibo.name }}
+  </article>
+}
 
 <p>Total Amiibos: {{ totalAmiibos() }}</p>
