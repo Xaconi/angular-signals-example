@@ -1,0 +1,21 @@
+.ase-home {
+
+  &__title {
+    font-family: var(--ase-font);
+    font-size: 24px;
+    line-height: 26px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+
+  &__subtitle {
+    font-family: var(--ase-font);
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 400;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 16px auto;
+  }
+}

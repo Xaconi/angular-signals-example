@@ -1,5 +1,16 @@
-@for (amiibo of amiibos(); track amiibo) {
-  <amiibo-item [item]="amiibo"/>
-}
+<section class="ase-home">
+  <h1 class="ase-home__title">
+    Welcome to the Amiibo Store!
+  </h1>
 
-<p>Total Amiibos: {{ totalAmiibos() }}</p>
+  <h2 class="ase-home__subtitle">
+    This is an example project to test Angular v17 new features! Feel free to explore this website and remember... you cannot buy anything here!! All this stuff it's just a test!
+  </h2>
+
+  @for (amiibo of amiibos(); track amiibo) {
+    <amiibo-item [item]="amiibo"/>
+  }
+
+  <p>Total Amiibos: {{ totalAmiibos() }}</p>
+</section>
+
