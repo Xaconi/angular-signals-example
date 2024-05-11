@@ -1,15 +1,13 @@
-.ase-header {
+.ase-footer {
   width: 100%;
-  height: 76px;
+  padding: 32px 16px;
   background-color: var(--ase-color-blue);
-  padding: 8px 16px;
   display: flex;
-  align-items: center;
+  justify-content: center;
 
-  &__title {
+  &__text {
     color: var(--ase-color-white);
     font-family: var(--ase-font);
-    font-size: 24px;
-    font-weight: 600;
+    font-size: 20px;
   }
 }

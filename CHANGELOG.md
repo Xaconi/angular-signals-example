@@ -5,3 +5,4 @@
 - Add project basic configuration
 - Add basic layout
 - Add basic header
+- Add basic footer
