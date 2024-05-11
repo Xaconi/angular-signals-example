@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, WritableSignal, signal } from '@angular/core';
 import { map } from 'rxjs';
 
 import { Amiibo } from '../../models/amiibo';
@@ -17,7 +17,12 @@ import { CommonModule } from '@angular/common';
 })
 export class HomeComponent {
 
+  public totalAmiibos: WritableSignal<number> = signal(0);
+
   constructor(private _amiiboService: AmiiboService) { }
 
-  public amiiboList$ = this._amiiboService.getAmiibos().pipe(map(amiiboList => amiiboList.amiibo));
+  public amiiboList$ = this._amiiboService.getAmiibos().subscribe(amiiboList => {
+    this.totalAmiibos.set(amiiboList.amiibo.length);
+    return amiiboList.amiibo;
+  });
 }
