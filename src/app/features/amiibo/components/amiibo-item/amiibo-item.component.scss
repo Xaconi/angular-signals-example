@@ -1,0 +1,64 @@
+.amiibo-item {
+  border: 1px solid var(--ase-color-blue);
+  border-radius: 12px;
+  padding: 8px;
+  cursor: pointer;
+  width: 100%;
+  max-width: var(--ase-item-width);
+
+  &:hover {
+    .amiibo-item__img {
+      transform: scale(1.05);
+    }
+  }
+
+  &__img-wrapper {
+    border: 1px solid var(--ase-color-grey);
+    border-radius: 12px;
+    margin-bottom: 8px;
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    max-width: 226px;
+  }
+
+  &__img {
+    display: block;
+    transition: all 0.5s ease;
+  }
+
+  &__data {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+  }
+
+  &__names {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__game-series {
+    font-family: var(--ase-font);
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 400;
+    color: var(--ase-color-grey);
+  }
+
+  &__name {
+    font-family: var(--ase-font);
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 600;
+    color: var(--ase-color-blue);
+  }
+
+  &__price {
+    font-family: var(--ase-font);
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 600;
+    color: var(--ase-color-pink);
+  }
+}
