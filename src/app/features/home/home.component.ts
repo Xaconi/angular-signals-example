@@ -7,11 +7,12 @@ import { AmiiboService } from '../../services/amiibo.service';
 
 import { CommonModule } from '@angular/common';
 import { AmiiboItemComponent } from '../amiibo/components/amiibo-item/amiibo-item.component';
+import { AmiiboListComponent } from '../amiibo/components/amiibo-list/amiibo-list.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, AmiiboItemComponent],
+  imports: [CommonModule, AmiiboItemComponent, AmiiboListComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })

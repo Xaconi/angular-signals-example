@@ -1,0 +1,10 @@
+.amiibo-list-items {
+  display: grid;
+  grid-template-columns: repeat(6, var(--ase-item-width));
+  padding: 16px 32px;
+  max-width: 1872px;
+  margin: 0 auto;
+  justify-content: space-around;
+  grid-column-gap: 8px;
+  grid-row-gap: 16px;
+}
