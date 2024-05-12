@@ -9,3 +9,4 @@
 - Add basic home with general amiibo request
 - Add basic amiibo item component
 - Add basic amiibo list component
+- Add basic AddToCart button on amiibo item component
