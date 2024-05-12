@@ -40,6 +40,16 @@
     margin-bottom: 16px;
   }
 
+  &__price {
+    display: block;
+    font-family: var(--ase-font);
+    font-size: 24px;
+    line-height: 26px;
+    font-weight: 600;
+    color: var(--ase-color-pink);
+    margin-bottom: 8px;
+  }
+
   &__quantity {
     display: block;
     margin-bottom: 8px;
