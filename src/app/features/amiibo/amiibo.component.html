@@ -1,0 +1,39 @@
+<section class="amiibo-detail">
+  <img
+    class="amiibo-detail__img"
+    [attr.src]="amiibo()?.image"
+    loading="lazy"
+    width="336"
+    height="498"
+  />
+
+  <section class="amiibo-detail-data">
+    <h2 class="amiibo-detail-data__subtitle"> {{ amiibo()?.gameSeries }} </h2>
+
+    <h1 class="amiibo-detail-data__title"> {{ amiibo()?.name }} </h1>
+
+    <p class="amiibo-detail-data__text">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vestibulum at felis et finibus. In hac habitasse platea dictumst. Nulla fermentum vehicula ante at maximus. Aliquam aliquet eros semper odio fringilla, sit amet dapibus mauris placerat. Suspendisse malesuada urna et purus faucibus hendrerit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nunc ac dignissim lectus, vitae iaculis lorem. Sed arcu ligula, eleifend vitae vulputate quis, cursus nec tortor. Nulla nec facilisis libero, volutpat fringilla arcu.
+    </p>
+
+    <p class="amiibo-detail-data__text">
+      Interdum et malesuada fames ac ante ipsum primis in faucibus. Morbi id erat lacinia, aliquet risus nec, cursus diam. Mauris sodales non odio a interdum. Aliquam malesuada sed lectus a sodales. Sed ut posuere lacus, ac feugiat arcu. Nulla facilisi. Suspendisse tempor ligula libero, eu porttitor lacus vestibulum faucibus. Nunc placerat ex lorem, eu aliquam sapien tincidunt sed.
+    </p>
+
+    <p class="amiibo-detail-data__text">
+      Phasellus at tortor fermentum, aliquam ex sed, auctor velit. Fusce efficitur ex sed felis sagittis euismod. Morbi rhoncus facilisis blandit. Suspendisse vitae vulputate ante, quis porttitor risus. Praesent consequat lacus at luctus aliquam. Vestibulum metus nisl, viverra a enim eget, placerat mattis purus. Ut ut ante urna.
+    </p>
+
+    <ase-quantity-button
+      class="amiibo-detail-data__quantity"
+      (onQuantityChange)="quantity.set($event)"
+    />
+
+    <ase-button
+      class="amiibo-detail-data__add-to-cart"
+      (onClick)="addToCart()"
+    >
+      ADD TO CART
+    </ase-button>
+  </section>
+</section>

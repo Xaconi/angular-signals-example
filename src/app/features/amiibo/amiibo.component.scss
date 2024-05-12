@@ -1,0 +1,52 @@
+.amiibo-detail {
+    padding: 36px 72px;
+    margin: 0 auto;
+    max-width: 80rem;
+    width: 100%;
+    display: flex;
+
+    &__img {
+      border: 1px solid var(--ase-color-grey);
+      border-radius: 12px;
+      margin-right: 16px;
+    }
+}
+
+.amiibo-detail-data {
+  &__title {
+    font-family: var(--ase-font);
+    font-size: 32px;
+    line-height: 30px;
+    font-weight: 600;
+    color: var(--ase-color-blue);
+    margin-bottom: 16px;
+  }
+
+  &__subtitle {
+    font-family: var(--ase-font);
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 400;
+    color: var(--ase-color-grey);
+    margin-bottom: 8px;
+  }
+
+  &__text {
+    font-family: var(--ase-font);
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 400;
+    color: var(--ase-color-grey);
+    margin-bottom: 16px;
+  }
+
+  &__quantity {
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  &__add-to-cart {
+    display: block;
+    max-width: 226px;
+  }
+}

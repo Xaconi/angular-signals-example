@@ -1,4 +1,4 @@
-import { Component, OnChanges, SimpleChanges, WritableSignal, signal } from '@angular/core';
+import { Component, WritableSignal, signal } from '@angular/core';
 import { map } from 'rxjs';
 
 import { Amiibo } from '../../models/amiibo';
@@ -16,17 +16,13 @@ import { AmiiboListComponent } from '../amiibo/components/amiibo-list/amiibo-lis
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
-export class HomeComponent implements OnChanges{
+export class HomeComponent {
 
   public totalAmiibos: WritableSignal<number> = signal(0);
   public amiibos: WritableSignal<Array<Amiibo>> = signal([]);
   public isLoading: WritableSignal<boolean> = signal(false);
 
   constructor(private _amiiboService: AmiiboService) { }
-
-  ngOnChanges(changes: SimpleChanges): void {
-    console.log("CHANGES");
-  }
 
   public amiiboList$ = this._amiiboService.getAmiibos().subscribe(amiiboList => {
     this.totalAmiibos.set(amiiboList.amiibo.length);

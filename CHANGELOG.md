@@ -10,3 +10,4 @@
 - Add basic amiibo item component
 - Add basic amiibo list component
 - Add basic AddToCart button on amiibo item component
+- Add amiibo detail screen

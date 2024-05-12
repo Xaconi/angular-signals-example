@@ -11,7 +11,9 @@ export class AseButtonComponent {
 
   public onClick = output<void>();
 
-  public handleClick() {
+  public handleClick(event: any) {
+    event.stopPropagation();
+    event.preventDefault();
     this.onClick.emit();
   }
 }

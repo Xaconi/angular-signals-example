@@ -2,12 +2,13 @@ import { Component, input } from '@angular/core';
 
 import { Amiibo } from '../../../../models/amiibo';
 
-import { AseButtonComponent } from '../../../../shared/ase-btn/ase-button/ase-button.component';
+import { AseButtonComponent } from '../../../../shared/ase-button/ase-button.component';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'amiibo-item',
   standalone: true,
-  imports: [AseButtonComponent],
+  imports: [RouterModule, AseButtonComponent],
   templateUrl: './amiibo-item.component.html',
   styleUrl: './amiibo-item.component.scss'
 })

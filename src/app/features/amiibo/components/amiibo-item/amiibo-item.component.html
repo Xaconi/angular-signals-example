@@ -1,31 +1,33 @@
 <article class="amiibo-item">
-  <span class="amiibo-item__img-wrapper">
-    <img
-      class="amiibo-item__img"
-      [attr.src]="item().image"
-      loading="lazy"
-      width="226"
-      height="338"
-    />
-  </span>
-
-  <span class="amiibo-item__data">
-    <span class="amiibo-item__names">
-      <h4 class="amiibo-item__game-series">
-        {{ item().gameSeries }}
-      </h4>
-
-      <h3 class="amiibo-item__name">
-        {{ item().name }}
-      </h3>
+  <a [routerLink]="'/item/' + item().head">
+    <span class="amiibo-item__img-wrapper">
+      <img
+        class="amiibo-item__img"
+        [attr.src]="item().image"
+        loading="lazy"
+        width="226"
+        height="338"
+      />
     </span>
 
-    <span class="amiibo-item__price">
-      {{ '0.00$' }}
-    </span>
-  </span>
+    <span class="amiibo-item__data">
+      <span class="amiibo-item__names">
+        <h4 class="amiibo-item__game-series">
+          {{ item().gameSeries }}
+        </h4>
 
-  <ase-button (onClick)="addToCart()">
-    ADD TO CART
-  </ase-button>
+        <h3 class="amiibo-item__name">
+          {{ item().name }}
+        </h3>
+      </span>
+
+      <span class="amiibo-item__price">
+        {{ '0.00$' }}
+      </span>
+    </span>
+
+    <ase-button (onClick)="addToCart()">
+      ADD TO CART
+    </ase-button>
+  </a>
 </article>
