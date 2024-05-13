@@ -1,5 +1,8 @@
 <section class="amiibo-list-items">
   @for (amiibo of amiibos() | slice : 0 : max(); track amiibo) {
-    <amiibo-item [item]="amiibo"/>
+    <amiibo-item
+      [item]="amiibo"
+      class="amiibo-list-items__item"
+    />
   }
 </section>
