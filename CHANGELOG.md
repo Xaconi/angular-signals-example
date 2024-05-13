@@ -12,3 +12,4 @@
 - Add basic AddToCart button on amiibo item component
 - Add amiibo detail screen
 - Add Cart icon component
+- Add Cart items and quantity service

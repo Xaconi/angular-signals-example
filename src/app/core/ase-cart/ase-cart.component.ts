@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
+
+import { CartService } from '../../services/cart.service';
 
 @Component({
   selector: 'ase-cart',
@@ -9,4 +11,15 @@ import { Component } from '@angular/core';
 })
 export class AseCartComponent {
 
+  private _cartService = inject(CartService);
+
+  public cartQuantity = signal<number>(0);
+
+  constructor() {
+    this._cartService.cart$.subscribe(newCart => {
+      let itemsQuantity = 0;
+      newCart.items.forEach(item => itemsQuantity += item.quantity);
+      this.cartQuantity.set(itemsQuantity);
+    })
+  }
 }

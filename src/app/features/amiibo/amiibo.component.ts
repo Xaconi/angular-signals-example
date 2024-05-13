@@ -2,6 +2,7 @@ import { Component, WritableSignal, inject, signal } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 import { AmiiboService } from '../../services/amiibo.service';
+import { CartService } from '../../services/cart.service';
 
 import { Amiibo } from '../../models/amiibo';
 
@@ -19,6 +20,7 @@ export class AmiiboComponent {
 
   private _activatedRoute = inject(ActivatedRoute);
   private _amiiboService = inject(AmiiboService);
+  private _cartService = inject(CartService);
 
   public amiibo: WritableSignal<Amiibo | null> = signal(null);
   public quantity: WritableSignal<number> = signal(1);
@@ -32,5 +34,6 @@ export class AmiiboComponent {
 
   public addToCart(): void {
     console.log(`ADD TO CART: QUANTITY ${this.quantity()}`);
+    this._cartService.addToCart(this.amiibo()!, this.quantity());
   }
 }
