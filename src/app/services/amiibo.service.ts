@@ -14,7 +14,7 @@ export class AmiiboService {
   constructor(private _httpClient: HttpClient) { }
 
   public getAmiibos(): Observable<AmiiboResponse> {
-    return this._httpClient.get<AmiiboResponse>(`${this.path}amiibo`);
+    return this._httpClient.get<AmiiboResponse>(`${this.path}amiibo/`);
   }
 
   public getAmiiboByHead(head: string): Observable<AmiiboResponse> {
