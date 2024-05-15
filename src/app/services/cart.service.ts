@@ -8,10 +8,7 @@ import { Amiibo } from '../models/amiibo';
 })
 export class CartService {
 
-  public cart = new BehaviorSubject<Cart>({
-    items: [],
-    total: 0
-  });
+  public cart = new BehaviorSubject<Cart>({ items: [], total: 0 });
   public cart$ = this.cart.asObservable();
 
   constructor() { }
