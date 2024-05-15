@@ -19,6 +19,12 @@
     margin: 0 auto 32px auto;
   }
 
+  &__filters {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
   &__filter {
     --arrow-icon: url(https://upload.wikimedia.org/wikipedia/commons/9/9d/Caret_down_font_awesome_whitevariation.svg);
 

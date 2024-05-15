@@ -7,38 +7,40 @@
     This is an example project to test Angular v17 new features! Feel free to explore this website and remember... you cannot buy anything here!! All this stuff it's just a test!
   </h2>
 
-  <select
-    class="ase-home__filter"
-    [ngModel]="filter().gameSeries"
-    (ngModelChange)="updateAmiiboSeries($event)"
-  >
-    <option selected="selected" value="">GAME SERIES</option>
-    @for (amiiboSerie of amiiboSeries(); track $index) {
-      <option [attr.value]="amiiboSerie.name">{{ amiiboSerie.name }}</option>
-    }
-  </select>
+  <section class="ase-home__filters">
+    <select
+      class="ase-home__filter"
+      [ngModel]="filter().gameSeries"
+      (ngModelChange)="updateAmiiboSeries($event)"
+    >
+      <option selected="selected" value="">GAME SERIES</option>
+      @for (amiiboSerie of amiiboSeries(); track $index) {
+        <option [attr.value]="amiiboSerie.name">{{ amiiboSerie.name }}</option>
+      }
+    </select>
 
-  <select
-    class="ase-home__filter"
-    [ngModel]="filter().type"
-    (ngModelChange)="updateAmiiboType($event)"
-  >
-    <option selected="selected" value="">TYPE</option>
-    @for (amiiboSerie of amiiboTypes(); track $index) {
-      <option [attr.value]="amiiboSerie.name">{{ amiiboSerie.name }}</option>
-    }
-  </select>
+    <select
+      class="ase-home__filter"
+      [ngModel]="filter().type"
+      (ngModelChange)="updateAmiiboType($event)"
+    >
+      <option selected="selected" value="">TYPE</option>
+      @for (amiiboSerie of amiiboTypes(); track $index) {
+        <option [attr.value]="amiiboSerie.name">{{ amiiboSerie.name }}</option>
+      }
+    </select>
 
-  <select
-    class="ase-home__filter"
-    [ngModel]="filter().character"
-    (ngModelChange)="updateAmiiboCharacter($event)"
-  >
-    <option selected="selected" value="">CHARACTER</option>
-    @for (amiiboSerie of amiiboCharacters(); track $index) {
-      <option [attr.value]="amiiboSerie.name">{{ amiiboSerie.name }}</option>
-    }
-  </select>
+    <select
+      class="ase-home__filter"
+      [ngModel]="filter().character"
+      (ngModelChange)="updateAmiiboCharacter($event)"
+    >
+      <option selected="selected" value="">CHARACTER</option>
+      @for (amiiboSerie of amiiboCharacters(); track $index) {
+        <option [attr.value]="amiiboSerie.name">{{ amiiboSerie.name }}</option>
+      }
+    </select>
+  </section>
 
   <amiibo-list
     [amiibos]="amiibos()"
