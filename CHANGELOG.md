@@ -13,3 +13,4 @@
 - Add amiibo detail screen
 - Add Cart icon component
 - Add Cart items and quantity service
+- Add amiibo list filters

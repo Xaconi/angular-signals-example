@@ -1,3 +1,5 @@
+import { AmiiboGame } from "./amiibo-game";
+
 export interface Amiibo {
   amiiboSeries: string;
   character: string;
@@ -16,15 +18,4 @@ export interface Amiibo {
   games3DS?: Array<AmiiboGame>;
   gamesSwitch?: Array<AmiiboGame>;
   gamesWiiU?: Array<AmiiboGame>;
-}
-
-interface AmiiboUsage {
-  Usage: string;
-  write: string;
-}
-
-interface AmiiboGame {
-  amiiboUsage: AmiiboUsage;
-  gameID: Array<string>;
-  gameName: string;
 }

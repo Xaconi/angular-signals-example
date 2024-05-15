@@ -9,8 +9,7 @@ import { provideHttpClient } from '@angular/common/http';
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet, AseLayoutComponent],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  templateUrl: './app.component.html'
 })
 export class AppComponent {
   title = 'angular-signals-example';
