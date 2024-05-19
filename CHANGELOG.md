@@ -15,3 +15,4 @@
 - Add Cart items and quantity service
 - Add amiibo list filters
 - Add loader for home and amiibo detail screens
+- Add Angular SSR
