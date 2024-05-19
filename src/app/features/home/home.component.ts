@@ -27,7 +27,11 @@ export class HomeComponent {
   public amiiboTypes: WritableSignal<Array<AmiiboFilter>> = signal([]);
   public amiiboCharacters: WritableSignal<Array<AmiiboFilter>> = signal([]);
   public isLoading: WritableSignal<boolean> = signal(true);
-  public filter: WritableSignal<AmiiboListFilter> = signal({ });
+  public filter: WritableSignal<AmiiboListFilter> = signal({
+    gameSeries: "",
+    type: "",
+    character: ""
+  });
 
   constructor(private _amiiboService: AmiiboService) { }
 
