@@ -16,4 +16,13 @@
     font-size: 24px;
     font-weight: 600;
   }
+
+  &__icons {
+    display: flex;
+    gap: 16px;
+  }
+
+  &__icon > path {
+    fill: var(--ase-color-white);
+  }
 }

@@ -16,3 +16,4 @@
 - Add amiibo list filters
 - Add loader for home and amiibo detail screens
 - Add Angular SSR
+- Add Github icon with repo link
