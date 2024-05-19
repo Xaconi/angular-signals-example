@@ -17,3 +17,4 @@
 - Add loader for home and amiibo detail screens
 - Add Angular SSR
 - Add Github icon with repo link
+- Add basic Vitest and Testing Library config
