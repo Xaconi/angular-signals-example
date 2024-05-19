@@ -23,6 +23,7 @@
     display: flex;
     gap: 8px;
     flex-wrap: wrap;
+    justify-content: center;
   }
 
   &__filter {
@@ -55,6 +56,6 @@
   &__loader {
     display: flex;
     justify-content: center;
-    margin: 36px 0;
+    margin: 72px 0;
   }
 }
