@@ -21,7 +21,6 @@ import { AseLoaderComponent } from '../../shared/ase-loader/ase-loader.component
 })
 export class HomeComponent {
 
-  public totalAmiibos: WritableSignal<number> = signal(0);
   public amiibos: WritableSignal<Array<Amiibo>> = signal([]);
   public amiiboSeries: WritableSignal<Array<AmiiboFilter>> = signal([]);
   public amiiboTypes: WritableSignal<Array<AmiiboFilter>> = signal([]);
@@ -36,7 +35,6 @@ export class HomeComponent {
   constructor(private _amiiboService: AmiiboService) { }
 
   public amiiboList$ = this._amiiboService.getAmiibos().subscribe(amiiboList => {
-    this.totalAmiibos.set(amiiboList.amiibo.length);
     this.amiibos.set(amiiboList.amiibo);
     this.isLoading.set(false);
   });
@@ -71,7 +69,6 @@ export class HomeComponent {
   private _updateList(): void {
     this.isLoading.set(true);
     this._amiiboService.getAmiibos(this.filter()).subscribe(amiiboList => {
-      this.totalAmiibos.set(amiiboList.amiibo.length);
       this.amiibos.set(amiiboList.amiibo);
       this.isLoading.set(false);
     });
