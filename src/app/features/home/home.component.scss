@@ -17,6 +17,11 @@
     text-align: center;
     max-width: 800px;
     margin: 0 auto 32px auto;
+
+    &--no-results {
+      margin: 36px auto;
+      color: var(--ase-color-grey);
+    }
   }
 
   &__filters {

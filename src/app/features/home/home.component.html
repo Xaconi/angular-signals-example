@@ -47,9 +47,15 @@
       <ase-loader />
     </section>
   } @else {
-    <amiibo-list
-      [amiibos]="amiibos()"
-    />
+    @if(amiibos().length == 0) {
+      <h2 class="ase-home__subtitle ase-home__subtitle--no-results">
+        No results with those filters... try another combination!
+      </h2>
+    } @else {
+      <amiibo-list
+        [amiibos]="amiibos()"
+      />
+    }
   }
 </section>
 
