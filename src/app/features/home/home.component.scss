@@ -51,4 +51,10 @@
       color: var(--ase-color-black);
     }
   }
+
+  &__loader {
+    display: flex;
+    justify-content: center;
+    margin: 36px 0;
+  }
 }

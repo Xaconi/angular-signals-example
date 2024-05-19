@@ -8,11 +8,12 @@ import { Amiibo } from '../../models/amiibo';
 
 import { AseQuantityButtonComponent } from '../../shared/ase-quantity-button/ase-quantity-button.component';
 import { AseButtonComponent } from '../../shared/ase-button/ase-button.component';
+import { AseLoaderComponent } from '../../shared/ase-loader/ase-loader.component';
 
 @Component({
   selector: 'app-amiibo',
   standalone: true,
-  imports: [AseQuantityButtonComponent, AseButtonComponent],
+  imports: [AseQuantityButtonComponent, AseButtonComponent, AseLoaderComponent],
   templateUrl: './amiibo.component.html',
   styleUrl: './amiibo.component.scss'
 })

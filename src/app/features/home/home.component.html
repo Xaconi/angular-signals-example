@@ -42,9 +42,15 @@
     </select>
   </section>
 
-  <amiibo-list
-    [amiibos]="amiibos()"
-  />
+  @if (isLoading()) {
+    <section class="ase-home__loader">
+      <ase-loader />
+    </section>
+  } @else {
+    <amiibo-list
+      [amiibos]="amiibos()"
+    />
+  }
 
   <p>Total Amiibos: {{ totalAmiibos() }}</p>
 </section>

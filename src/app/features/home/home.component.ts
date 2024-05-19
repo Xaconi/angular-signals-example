@@ -10,11 +10,12 @@ import { AmiiboService } from '../../services/amiibo.service';
 
 import { AmiiboItemComponent } from '../amiibo/components/amiibo-item/amiibo-item.component';
 import { AmiiboListComponent } from '../amiibo/components/amiibo-list/amiibo-list.component';
+import { AseLoaderComponent } from '../../shared/ase-loader/ase-loader.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, FormsModule, AmiiboItemComponent, AmiiboListComponent],
+  imports: [CommonModule, FormsModule, AmiiboItemComponent, AmiiboListComponent, AseLoaderComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
@@ -25,7 +26,7 @@ export class HomeComponent {
   public amiiboSeries: WritableSignal<Array<AmiiboFilter>> = signal([]);
   public amiiboTypes: WritableSignal<Array<AmiiboFilter>> = signal([]);
   public amiiboCharacters: WritableSignal<Array<AmiiboFilter>> = signal([]);
-  public isLoading: WritableSignal<boolean> = signal(false);
+  public isLoading: WritableSignal<boolean> = signal(true);
   public filter: WritableSignal<AmiiboListFilter> = signal({ });
 
   constructor(private _amiiboService: AmiiboService) { }
@@ -33,6 +34,7 @@ export class HomeComponent {
   public amiiboList$ = this._amiiboService.getAmiibos().subscribe(amiiboList => {
     this.totalAmiibos.set(amiiboList.amiibo.length);
     this.amiibos.set(amiiboList.amiibo);
+    this.isLoading.set(false);
   });
 
   public amiiboSeries$ = this._amiiboService.getAmiiboSeries().subscribe(amiiboSeriesList => {
@@ -63,9 +65,11 @@ export class HomeComponent {
   }
 
   private _updateList(): void {
+    this.isLoading.set(true);
     this._amiiboService.getAmiibos(this.filter()).subscribe(amiiboList => {
       this.totalAmiibos.set(amiiboList.amiibo.length);
       this.amiibos.set(amiiboList.amiibo);
+      this.isLoading.set(false);
     });
   }
 }
