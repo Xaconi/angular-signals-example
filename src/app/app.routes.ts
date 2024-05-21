@@ -6,11 +6,13 @@ import { AmiiboComponent } from './features/amiibo/amiibo.component';
 export const routes: Routes = [
   {
     path: 'home',
-    component: HomeComponent
+    component: HomeComponent,
+    data: { revalidate: 10 }
   },
   {
     path: 'item/:amiiboId',
-    component: AmiiboComponent
+    component: AmiiboComponent,
+    data: { revalidate: 10 }
   },
   {
     path: '**',
